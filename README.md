@@ -2,7 +2,7 @@
 I ran the tasks on a ASUS, and got these results:
 
 Task                                  | Time
---------------------------------------|--------------;
+--------------------------------------|--------------:
 Append 50,000 chars to String         | 1.185997 sec
 Append 100,000 chars to String        | 5.732071 sec
 Append 100,000 chars to StringBuilder | 0.006582 sec
