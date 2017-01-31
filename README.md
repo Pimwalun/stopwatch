@@ -20,9 +20,7 @@ Why does appending 100,000 chars to a String take more than 2X the time to appen
 
 Why is appending to StringBuilder so much different than appending to String? What is happening to the String?
 
-- Because when I input the value in StringBuilder, it is a class used better than class String. It can fix inside and change the value of the  
-  String such as bringing String to connect to the end of the old one by using append() method. So, it is no need to make a new object of String  
-  which it will help to reduce using the memory. It then can spend the time faster than using the normal String.
+- Because when I input the value in StringBuilder, it is a class used better than class String. It can fix inside and change the value of the String such as bringing String to connect to the end of the old one by using append() method. So, it is no need to make a new object of String which it will help to reduce using the memory. It then can spend the time faster than using the normal String.
   
   
 Explain difference in time to sum double, Double, and BigDecimal. Which is faster and why?
