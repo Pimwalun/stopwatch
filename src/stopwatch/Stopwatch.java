@@ -17,7 +17,6 @@ public class Stopwatch {
 	
 	/** Initialize a new Stopwatch object. */
 	public Stopwatch() {
-		this.running = false;
 		this.startTime = 0;
 		this.stopTime = 0;
 	}
@@ -27,7 +26,7 @@ public class Stopwatch {
 	 * @return the elapsed time in seconds with decimal
 	 */
 	public double getElapsed() {
-		if (running == true) {
+		if (isRunning()) {
 			return (System.nanoTime() - startTime) * NANOSECONDS;
 		}
 		return (stopTime - startTime) * NANOSECONDS;
@@ -38,15 +37,12 @@ public class Stopwatch {
 	 * @return true if the stopwatch is running, false if stopwatch is stopped
 	 */
 	public boolean isRunning() {
-		if (running == true) {
-			return true;
-		}
-		return false;
+		return running;
 	}
 	
 	/** reset the stopwatch and start if if stopwatch is not running. If the stopwatch is already running then start does nothing. */
 	public void start() {
-		if (running == false) {
+		if (!isRunning()) {
 			running = true;
 			startTime = System.nanoTime();
 		}
@@ -54,7 +50,7 @@ public class Stopwatch {
 
 	/** stop the stopwatch. If the stopwatch is already stopped, then stop does nothing. */
 	public void stop() {
-		if (running == true) {
+		if (isRunning()) {
 			running = false;
 			stopTime = System.nanoTime();
 		}
